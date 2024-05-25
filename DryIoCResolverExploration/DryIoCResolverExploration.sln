@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashboardConnectors.Library", "DashboardConnectors.Library\DashboardConnectors.Library.csproj", "{D1110AE3-7204-43E5-BF1A-6D8E27FB234C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{8D2A6410-F3FB-4FAE-BF11-9A2FA4415FF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApp1", "MauiApp1\MauiApp1.csproj", "{366DA6F6-C647-48EF-84B6-1EBF36881648}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1110AE3-7204-43E5-BF1A-6D8E27FB234C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1110AE3-7204-43E5-BF1A-6D8E27FB234C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1110AE3-7204-43E5-BF1A-6D8E27FB234C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1110AE3-7204-43E5-BF1A-6D8E27FB234C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D2A6410-F3FB-4FAE-BF11-9A2FA4415FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D2A6410-F3FB-4FAE-BF11-9A2FA4415FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D2A6410-F3FB-4FAE-BF11-9A2FA4415FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D2A6410-F3FB-4FAE-BF11-9A2FA4415FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366DA6F6-C647-48EF-84B6-1EBF36881648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366DA6F6-C647-48EF-84B6-1EBF36881648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366DA6F6-C647-48EF-84B6-1EBF36881648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366DA6F6-C647-48EF-84B6-1EBF36881648}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

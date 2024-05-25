@@ -7,7 +7,7 @@ namespace DashboardConnectors.Library.Models;
 public class DryerDashboardItem : IBasePairedApplianceDashboardItem
 {
     public event PropertyChangedEventHandler? PropertyChanged;
-    public string? Identifier { get; }
+    public string? Identifier => nameof(DryerDashboardItem);
     public string Key { get; set; }
     public string? AutomationId { get; }
     public string? FabricationNumber { get; }

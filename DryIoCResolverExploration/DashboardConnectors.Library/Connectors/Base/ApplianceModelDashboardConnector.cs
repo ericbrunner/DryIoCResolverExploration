@@ -3,8 +3,7 @@ using DryIoc;
 
 namespace DashboardConnectors.Library.Connectors.Base;
 
-public abstract class ApplianceModelDashboardConnector<TDashboardItem>
-    where TDashboardItem : IBasePairedApplianceDashboardItem
+public abstract class ApplianceModelDashboardConnector<TDashboardItem> : IApplianceModelDashboardConnector<TDashboardItem> where TDashboardItem : IBasePairedApplianceDashboardItem
 {
     private readonly IContainer _diContainer;
     private const string DashboardConnectorLogDomain = "DashboardConnector";
@@ -16,7 +15,7 @@ public abstract class ApplianceModelDashboardConnector<TDashboardItem>
     }
 
 
-    protected IBasePairedApplianceDashboardItem CreateDashboardItem()
+    public virtual TDashboardItem CreateDashboardItem()
     {
         TDashboardItem? item = default(TDashboardItem);
 
@@ -27,12 +26,12 @@ public abstract class ApplianceModelDashboardConnector<TDashboardItem>
             item = _diContainer.Resolve<TDashboardItem>();
 
             System.Diagnostics.Debug.WriteLine(
-                $"{nameof(CreateDashboardItem)} SUCCESS in {GetType().Name} {Environment.NewLine}" + logMessage);
+                $"{nameof(CreateDashboardItem)} on Thread-Id:{Thread.CurrentThread.ManagedThreadId} SUCCESS in {GetType().Name} {Environment.NewLine}" + logMessage);
         }
         catch (Exception e)
         {
             System.Diagnostics.Debug.WriteLine(
-                $"{nameof(CreateDashboardItem)} ERROR in {GetType().Name} {Environment.NewLine}" + logMessage +
+                $"{nameof(CreateDashboardItem)} on Thread-Id:{Thread.CurrentThread.ManagedThreadId} ERROR in {GetType().Name} {Environment.NewLine}" + logMessage +
                 $"{Environment.NewLine} Exception: {e}");
         }
 

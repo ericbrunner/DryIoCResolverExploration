@@ -1,6 +1,4 @@
-﻿using DashboardConnectors.Library;
-
-namespace MauiApp;
+﻿namespace MauiApp1;
 
 public partial class App : Application
 {
@@ -8,8 +6,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        IoC.BuildContainer();
-        
         MainPage = new AppShell();
     }
 }

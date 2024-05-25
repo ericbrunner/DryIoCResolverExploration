@@ -4,12 +4,15 @@ using DryIoc;
 
 namespace DashboardConnectors.Library;
 
-public class IoC
+public class IoC 
 {
     public static readonly Container Container = new();
 
+    public static bool IsBuilt;
     public static void BuildContainer()
     {
+        if (IsBuilt) return;
+        
         Container.Register<DryerDashboardItem>();
         Container.Register<WasherDashboardItem>();
         Container.Register<OvenDashboardItem>();
@@ -17,5 +20,9 @@ public class IoC
         Container.Register<DryerDashboardConnector>();
         Container.Register<WasherDashboardConnector>();
         Container.Register<OvenDashboardConnector>();
+
+        IsBuilt = true;
     }
+
+
 }
